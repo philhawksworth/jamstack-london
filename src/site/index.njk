@@ -1,0 +1,23 @@
+---
+title: Home
+layout: layouts/base.njk
+---
+
+
+
+{% for item in collections.event %}
+
+  <h2>{{ item.data.title }}</h2>  
+  <div>{{ item.templateContent | safe }}</div>
+
+  {% for talk in item.data.talks %}
+    <h3>{{talk.title}}</h3>
+    <div>{{talk.description}}</div>
+    {{ talk | dump}}
+  {% endfor %}
+
+{% endfor %}
+
+<hr>
+
+{{collections.talks | dump}}

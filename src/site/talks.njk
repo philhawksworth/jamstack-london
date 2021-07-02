@@ -1,0 +1,20 @@
+---
+title: Home
+layout: layouts/base.njk
+---
+
+
+
+{% for talk in collections.talks %}
+
+    <a href="/talks/{{ talk.title | slug}}">
+      <h3>{{talk.title}}</h3>
+    </a>
+    <p></p>
+    <div>{{talk.description}}</div>
+
+{% endfor %}
+
+<hr>
+
+{{collections.talks | dump}}

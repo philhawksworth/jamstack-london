@@ -1,0 +1,10 @@
+---
+pagination:
+  data: collections.talks
+  alias: item
+  size: 1
+permalink: "/talks/{{ item.title | slug }}/index.html"
+layout: layouts/base.njk
+---
+<a class="home" href="/">Go back</a>
+{{ item | dump }}
