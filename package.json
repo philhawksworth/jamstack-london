@@ -10,8 +10,7 @@
     "build": "eleventy",
     "serve": "eleventy --serve",
     "start": "npm run dev",
-    "dev": "ntl dev",
-    "dmc": "ntl dev"
+    "dev": "ntl dev -d dist"
   },
   "keywords": [
     "eleventy",

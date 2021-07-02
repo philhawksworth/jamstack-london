@@ -26,15 +26,21 @@ module.exports = (eleventyConfig) => {
 
 
   eleventyConfig.addCollection("talks", function(collectionApi) {
-    const talks = collectionApi.getFilteredByTag("event").map(event => {
-      // const data = {
-      //   event.data.talks
-      // }
-      // return 
+    
+    const talks = collectionApi.getFilteredByTag("event").map(event => {      
+      // add the date to each talk
+      return event.data.talks.map(e => {
+        e['date'] = event.date;
+        // console.log(e);
+        return e
+      });
+    });
 
-      // todo add date to each talk object
-    })
+    // console.log(talks.flat());
     return talks.flat();
+    
+
+    
   });
 
 
@@ -46,7 +52,11 @@ module.exports = (eleventyConfig) => {
     dir: {
       input: "src/site",
       output: "dist"
-    }
+    },
+    templateFormats : ["njk", "md"],
+    htmlTemplateEngine : "njk",
+    markdownTemplateEngine : "njk",
+    
   };
 
 };

@@ -3,21 +3,34 @@ title: Home
 layout: layouts/base.njk
 ---
 
+<h1>Jamstack London!</h1>
 
 
-{% for item in collections.event %}
 
-  <h2>{{ item.data.title }}</h2>  
-  <div>{{ item.templateContent | safe }}</div>
+{% set item = collections.event | first %}
 
+<h2>{{ item.data.title }}</h2>
+<p class="date">{{ item.data.date }}</p>
+<div>
+  {{ item.templateContent | safe }}
+</div>
+
+<ul>
   {% for talk in item.data.talks %}
-    <h3>{{talk.title}}</h3>
-    <div>{{talk.description}}</div>
-    {{ talk | dump}}
+    <li>
+      <h2><a href="/talks/{{ talk.title | slug }}/">{{ talk.title}}</a></h2>
+      <p class="speaker">{{ talk.speaker.name }}</p>
+      <p class="date">{{ talk.date}}</p>
+      <div class="description">
+        {{ talk.description }}
+      </div>  
+    </li>
   {% endfor %}
+  </ul>
 
-{% endfor %}
+
+
+
 
 <hr>
 
-{{collections.talks | dump}}

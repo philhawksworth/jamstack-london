@@ -1,10 +1,22 @@
 ---
 pagination:
   data: collections.talks
-  alias: item
+  alias: talk
   size: 1
-permalink: "/talks/{{ item.title | slug }}/index.html"
+permalink: "/talks/{{ talk.title | slug }}/index.html"
 layout: layouts/base.njk
 ---
-<a class="home" href="/">Go back</a>
-{{ item | dump }}
+<a class="home" href="/">home</a>
+<a class="talks" href="/talks/">talks</a>
+
+
+<ul>
+  <li>
+    <h2><a href="/talks/{{ talk.title | slug }}/">{{ talk.title}}</a></h2>
+    <p class="speaker">{{ talk.speaker.name }}</p>
+    <p class="date">{{ talk.date}}</p>
+    <div class="description">
+      {{ talk.description }}
+    </div>  
+  </li>
+</ul>
