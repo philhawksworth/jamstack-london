@@ -1,0 +1,23 @@
+---
+layout: "layouts/base.njk"
+---
+
+<a href="/events/{{ date | formatDate }}" class="btn bubble">{{ date | formatDate('DDD') }}</a>
+<h2 class="event-title">{{ title }}</h2>
+<div class="teaser">
+  {{ content | safe }}
+</div>
+
+
+{% if date | future %}
+<div class="ctas">
+  <a href="{{ meetupLink }}" class="btn bubble">Register for the meetup</a>
+  <a href="{{ eventLink }}" class="btn bubble">Join the online event </a>
+</div>
+{% endif %}
+
+<div class="talks">
+{% for item in talks %}
+  {% include "talk-tout.njk" %} 
+{% endfor %}
+</div> 

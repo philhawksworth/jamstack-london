@@ -2,7 +2,7 @@
 @import '_variables';
 
 
-html, body {
+* {
   margin: 0;
   padding: 0;
 }
@@ -10,22 +10,103 @@ html, body {
 body {
   text-align: center;
   color: $primary-text-color;
-  font-family: Georgia, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
-  line-height: 28px;
   font-size: 14px;
+  line-height: 1.5;
   background-color: $primary-page-color;
-  padding: 2rem;
   border-top: 3px solid $secondary-text-color;
 
   @include bp(mid) {
-    border-top-color: $accent-color;
     font-size: 16px;
   }
   @include bp(wide) {
-    border-top-color: $accent-color-alternate;
     font-size: 18px;
   }
+}
+
+p {
+  margin: 1rem 0;
+}
+p+p {
+  margin: 2rem 0 1rem;
+}
+.description {
+ margin: 1rem 0;
+}
+
+.nav {
+  list-style: none;
+  display: inline-block;
+  margin:0 auto 2rem;
+  li {
+    display: inline-block;
+    margin: 0.2rem 1rem;
+  }
+}
+
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 6rem ;
+  a:link,
+  a:visited {
+   text-decoration: none;
+   color: #fff;
+  }
+  a:hover,
+  a:focus {
+   color: $accent-color;
+  }
+}
+
+main {
+  padding: 4rem 0;
+}
+
+footer {
+  background-color: #ffffff;
+  color: #fff;
+  text-align: left;
+  padding: 4rem;
+  margin-top: 4rem;
+  font-size: 0.8rem;
+  a:link,
+  a:visited {
+   text-decoration: none;
+   color: #00000099;
+  }
+  a:hover,
+  a:focus {
+    color: #000000;
+  }
+
+  .nav li {
+    display: block;
+  }
+}
+
+section {
+  margin-bottom: 5em;
+  p {
+    max-width: 80%;
+    margin: 1em auto;
+  }
+}
+
+.site_title {
+  text-indent: -9999px;
+  width: 320px;
+  height: 93px;
+  overflow: hidden;
+  background-image: url(/images/jamstack-london-logo.svg);
+  background-size: 8em;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .container {
@@ -45,3 +126,77 @@ ul {
   text-align: left;
 }
 
+.ctas {
+  margin: 2em 0 4em;
+}
+
+.talk-card {
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  text-align: left;
+  padding: 2rem;
+  font-size: 0.8rem;
+  background-position: right;
+  background-size: cover;
+  box-shadow: 0 0 20px #00000066;
+  margin:1rem;
+
+  a:link,
+  a:visited {
+   text-decoration: none;
+   color: $accent-color
+  }
+  a:hover,
+  a:focus {
+    color: #fff;
+  }
+
+  .speaker {
+    margin: 4rem 0 0.5rem;
+    font-size: 2rem;
+  }
+
+  h3 {
+    max-width: 50%;
+    line-height: 1.3;
+  }
+}
+
+
+
+.bubble {
+  border-radius: 30px;
+  background-color: #fff;
+  color:#000;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  margin:0 0.5rem;
+  box-shadow: 0 0 15px #00000022;
+}
+a.bubble:link,
+a.bubble:visited {
+ text-decoration: none;
+ color:#000;
+}
+a.bubble:hover,
+a.bubble:focus {
+  background-color: $accent-color;
+  color:#fff;
+}
+
+h2.event-title {
+  font-size: 3.5em;
+  line-height: 0.9;
+  font-weight: bold;
+  color: #000;
+  margin: 2rem auto;
+  max-width: 10em;
+}
+
+.teaser {
+  max-width:60%;
+  margin: 1rem auto 2rem;
+  line-height: 1.3;
+}

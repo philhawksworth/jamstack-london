@@ -3,34 +3,22 @@ title: Home
 layout: layouts/base.njk
 ---
 
-<h1>Jamstack London!</h1>
-
-
+<section>
+  <h2>Jamstack London meetup group</h2>
+  <p>
+    A regular online meetup to talk about <a href="https://jamstack.com/community">Jamstack</a> web development and related topics. Each event includes 2 talks of 20 minutes, a number of 90 second
+  </p>
+</section>
 
 {% set item = collections.event | first %}
-
-<h2>{{ item.data.title }}</h2>
-<p class="date">{{ item.data.date }}</p>
-<div>
+<a href="/events/{{ item.data.date | formatDate }}" class="btn bubble">Next meeting -  {{ item.data.date | formatDate('DDD') }}</a>
+<h2 class="event-title">{{ item.data.title }}</h2>
+<div class="teaser">
   {{ item.templateContent | safe }}
 </div>
-
-<ul>
-  {% for talk in item.data.talks %}
-    <li>
-      <h2><a href="/talks/{{ talk.title | slug }}/">{{ talk.title}}</a></h2>
-      <p class="speaker">{{ talk.speaker.name }}</p>
-      <p class="date">{{ talk.date}}</p>
-      <div class="description">
-        {{ talk.description }}
-      </div>  
-    </li>
+<div class="talks">
+  {% for item in item.data.talks %}
+  {% include "talk-tout.njk" %} 
   {% endfor %}
-  </ul>
-
-
-
-
-
-<hr>
+</div>
 

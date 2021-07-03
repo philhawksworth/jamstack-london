@@ -1,11 +1,14 @@
 const sass = require("sass");
 const fs = require("fs-extra");
+const { DateTime } = require("luxon");
 
 
 module.exports = (eleventyConfig) => {
 
-  // pass files direclty through to the output
-  eleventyConfig.addPassthroughCopy("site/images");
+  // pass files directly through to the output
+  eleventyConfig.addPassthroughCopy({ 
+    "src/site/images": "images" 
+  });
 
   // watch the scss source files in case of need to regenerate
   eleventyConfig.addWatchTarget("src/scss/");
@@ -26,25 +29,27 @@ module.exports = (eleventyConfig) => {
 
 
   eleventyConfig.addCollection("talks", function(collectionApi) {
-    
     const talks = collectionApi.getFilteredByTag("event").map(event => {      
       // add the date to each talk
       return event.data.talks.map(e => {
         e['date'] = event.date;
-        // console.log(e);
         return e
       });
     });
-
-    // console.log(talks.flat());
     return talks.flat();
-    
-
-    
   });
 
+  // Add date formatting
+  eleventyConfig.addFilter("formatDate", (dateObj, format="yyyy-MM-dd") => {
+    return DateTime.fromJSDate(dateObj).toFormat(format);
+  });
 
-
+  // determine if a date is in the future or in the past
+  eleventyConfig.addFilter("future", (dateObj) => {
+    const today = DateTime.now().endOf('day');
+    const date = DateTime.fromJSDate(dateObj).endOf('day');
+    return date >= today;
+  })
 
 
   // where do things live?
