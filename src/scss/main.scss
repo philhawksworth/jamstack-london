@@ -241,7 +241,10 @@ ul {
 }
 
 
-.bubble {
+.bubble,
+input[type=submit]
+{
+  border-style: none;
   border-radius: 30px;
   background-color: #fff;
   color:#000;
@@ -254,13 +257,23 @@ ul {
 }
 a.bubble:link,
 a.bubble:visited {
- text-decoration: none;
- color:#000;
+  text-decoration: none;
+  color:#000;
 }
+input[type=submit]:hover,
+input[type=submit]:focus,
 a.bubble:hover,
 a.bubble:focus {
   background-color: $accent-color;
   color:#fff;
+}
+
+input[type=submit] {
+  background-color: #000;
+  color: #fff;
+  margin: 1em 0 0;
+  padding: 1em 4em;
+
 }
 
 h2 {
@@ -285,4 +298,31 @@ time {
   max-width:60%;
   margin: 1rem auto 2rem;
   line-height: 1.3;
+}
+
+
+form {
+
+  border-radius: 4px;
+  padding: 1em 3em 2em;
+  background-color: #fff;
+  box-shadow: 0 0 20px #00000022;
+  text-align: left;
+  margin: 2em auto;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin: 1em auto 0.2em;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  border: solid 2px $accent-color-faint;
+  font-size: 1.3rem;
+  padding: 0.3em 0.2em;
+  font-family: Arial, Helvetica, sans-serif;
 }

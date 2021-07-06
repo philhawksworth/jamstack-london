@@ -1,0 +1,46 @@
+---
+title: Speak at the Jamstack London meetup
+layout: layouts/base.njk
+---
+
+<h2>Give a 20 minute talk</h2>
+<p>
+  Whether you're an experienced speaker or preparing to grab a microphone for the first time, we'd love to hear from you. And we're eager to support you to help you make a success of your talk.
+</p>
+<p>
+  Talks are 20 minutes long and presented remotely on our conferencing platform. You can share your screen to live code, present a slide deck, or just speak into the camera. Whatever you like.
+</p>
+<p>
+  Get in touch to talk about giving a talk
+</p>
+
+<form action="/thanks" method="POST" name="talk-submissions" netlify>
+  <label for="name">Your name</label>
+  <input type="text" name="name" id="name" />
+  <label for="email">Your email</label>
+  <input type="email" name="email" id="email" />
+  <label for="details">Your talk</label>
+  <textarea name="details" id="details" cols="30" rows="10"></textarea>
+  <input type="submit" value="Submit your talk idea" />
+</form>
+
+<h2>Grab 90 seconds in the spotlight</h2>
+<p>
+  Each time we meet we'll make time for some people to grab the microphone for a 90 seconds to tell us something.
+</p>
+<p>
+  Are you building a new product? Have you released a new project that you're proud of? Are you recruiting? Are you looking for contributor to your open source project? Tell us!
+</p>
+<p>
+  Register for a 90 second slot and practice cramming your info into those precious 90 seconds. (Because at 91 seconds, we're moving on!) 
+</p>
+
+<form action="/thanks" method="POST" name="90-second-spotlight-submissions" netlify>
+  <label for="name">Your name</label>
+  <input type="text" name="name" id="name" />
+  <label for="email">Your email</label>
+  <input type="email" name="email" id="email" />
+  <label for="details">Your 90 second pitch</label>
+  <textarea name="details" id="details" cols="30" rows="10"></textarea>
+  <input type="submit" value="Request a 90 seconds spotlight" />
+</form>
