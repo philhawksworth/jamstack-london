@@ -7,29 +7,40 @@
   padding: 0;
 }
 
+::-moz-selection { 
+  background: $accent-color; 
+  color: #fff;
+}
+::selection {
+  background: $accent-color;
+  color: #fff;
+}
+
 body {
   text-align: center;
   color: $primary-text-color;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  background-color: $primary-page-color;
+  background-color: $accent-color;
   border-top: 3px solid $secondary-text-color;
 
   @include bp(mid) {
-    font-size: 16px;
+    font-size: 18px;
   }
   @include bp(wide) {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 p {
-  margin: 1rem 0;
+  margin: 1rem auto;
+  width: 80%;
+  
 }
 p+p {
-  margin: 2rem 0 1rem;
+  margin: 2rem auto 1rem;
 }
 .description {
  margin: 1rem 0;
@@ -45,12 +56,17 @@ p+p {
   }
 }
 
+footer .nav {
+  margin: 0 1rem 0 0;
+}
+
 
 header {
   background-color: #000;
+  border-top: 2px solid $accent-color;
   color: #fff;
   text-align: center;
-  padding: 6rem ;
+  padding:2rem 0 8rem;
   a:link,
   a:visited {
    text-decoration: none;
@@ -63,15 +79,16 @@ header {
 }
 
 main {
-  padding: 4rem 0;
+  padding: 4rem 0 8rem;
+  background-color: $primary-page-color;
 }
 
 footer {
   background-color: #ffffff;
+  border-bottom: 12px solid $accent-color;
   color: #fff;
   text-align: left;
   padding: 4rem;
-  margin-top: 4rem;
   font-size: 0.8rem;
   a:link,
   a:visited {
@@ -88,6 +105,20 @@ footer {
   }
 }
 
+
+a:link,
+a:visited {
+ text-decoration-color: $accent-color-faint;
+ text-decoration-thickness: 2px;
+ color: #000;
+ 
+}
+a:hover,
+a:focus {
+  text-decoration-color: $accent-color;
+  text-decoration-thickness: 4px;
+}
+
 section {
   margin-bottom: 5em;
   p {
@@ -95,6 +126,9 @@ section {
     margin: 1em auto;
   }
 }
+
+
+
 
 .site_title {
   text-indent: -9999px;
@@ -106,7 +140,7 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  margin: 0 auto;
+  margin: 8rem auto 4rem;
 }
 
 .container {
@@ -114,10 +148,10 @@ section {
   margin:0 auto;
 
   @include bp(mid) {
-    max-width: 700px;
+    max-width: 600px;
   }
   @include bp(wide) {
-    max-width: 1000px;
+    max-width: 800px;
   }
 }
 
@@ -128,6 +162,17 @@ ul {
 
 .ctas {
   margin: 2em 0 4em;
+}
+
+
+.links_list {
+  margin: 0 auto;
+  text-align: center;
+  list-style: none;
+}
+
+.talks-list {
+  margin: 2rem auto;
 }
 
 .talk-card {
@@ -153,16 +198,47 @@ ul {
   }
 
   .speaker {
-    margin: 4rem 0 0.5rem;
-    font-size: 2rem;
+    margin: 4em 0 0.5em;
+    font-size: 2.5em;
   }
 
+  p {
+    margin-left: 0;
+  }
+
+  h2 {
+    color: #ffffff;
+  }
   h3 {
-    max-width: 50%;
+    max-width: 400px;
+    font-size: 1.2rem;
     line-height: 1.3;
+    margin-bottom: 1em;
+    text-shadow: 0 0 2px #00000099;
+
+    a:link,
+    a:visited {
+     text-decoration: underline;
+     text-decoration-color: #ffffff44;
+     text-decoration-thickness: 1px;
+    }
+    a:hover,
+    a:focus {
+      text-decoration-color: $accent-color;
+      text-decoration-thickness: 2px;
+      color: #fff;
+    }
   }
 }
 
+
+.schedule {
+  list-style: none;
+  text-align: left;
+  display: inline-block;
+  margin: 1rem auto;
+  max-width: 80%;
+}
 
 
 .bubble {
@@ -174,6 +250,7 @@ ul {
   padding: 0.4rem 0.8rem;
   margin:0 0.5rem;
   box-shadow: 0 0 15px #00000022;
+  white-space: nowrap;
 }
 a.bubble:link,
 a.bubble:visited {
@@ -186,13 +263,22 @@ a.bubble:focus {
   color:#fff;
 }
 
+h2 {
+  font-size: 2rem;;
+  margin: 3em 0 1em;
+  line-height: 0.9;
+  color: #000;
+}
+
 h2.event-title {
   font-size: 3.5em;
-  line-height: 0.9;
   font-weight: bold;
-  color: #000;
   margin: 2rem auto;
   max-width: 10em;
+}
+
+time {
+  font-weight: bold;
 }
 
 .teaser {

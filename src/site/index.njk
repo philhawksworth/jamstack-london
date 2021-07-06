@@ -4,14 +4,14 @@ layout: layouts/base.njk
 ---
 
 <section>
-  <h2>Jamstack London meetup group</h2>
+  <h2>The London Jamstack meetup group</h2>
   <p>
     A regular online meetup to talk about <a href="https://jamstack.com/community">Jamstack</a> web development and related topics. Each event includes 2 talks of 20 minutes, a number of 90 second
   </p>
 </section>
 
 {% set item = collections.event | first %}
-<a href="/events/{{ item.data.date | formatDate }}" class="btn bubble">Next meeting -  {{ item.data.date | formatDate('DDD') }}</a>
+<a href="/events/{{ item.data.date | formatDate }}" class="btn bubble">Next meeting -  {{ item.data.date | formatDate('LLLL dd, yyyy') }}</a>
 <h2 class="event-title">{{ item.data.title }}</h2>
 <div class="teaser">
   {{ item.templateContent | safe }}
@@ -21,4 +21,8 @@ layout: layouts/base.njk
   {% include "talk-tout.njk" %} 
   {% endfor %}
 </div>
+
+<p>
+  <a href="/events/{{ item.data.date | formatDate }}">Find more information on event times and how to get involved</a>
+</p> 
 

@@ -1,17 +1,17 @@
 ---
-title: Home
+title: Talks
 layout: layouts/base.njk
 ---
 
-<ul>
-{% for talk in collections.talks %}
-  <li>
-    <h2><a href="/talks/{{ talk.title | slug }}/">{{ talk.title}}</a></h2>
-    <p class="speaker">{{ talk.speaker.name }}</p>
-    <p class="date">{{ talk.date}}</p>
-    <div class="description">
-      {{ talk.description }}
-    </div>  
-  </li>
+<p>
+  Want to add your talk to the list below? A meetup like this is a great place to debut a new talk or to speak for the very first time. We're eager to help you make a success of your talk. Why not <a href="/speak/">submit a talk</a>?
+</p>
+<h2>Talks</h2>
+<p>
+  Huge thanks to all of our speakers. Videos of the talks are shared with their kind permission.
+</p>
+<ul class="talks-list">
+{% for item in collections.talks %}
+{% include "talk-tout.njk" %} 
 {% endfor %}
 </ul>
