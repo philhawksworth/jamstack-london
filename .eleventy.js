@@ -29,12 +29,16 @@ module.exports = (eleventyConfig) => {
 
 
   eleventyConfig.addCollection("talks", function(collectionApi) {
-    const talks = collectionApi.getFilteredByTag("event").map(event => {      
+    const talks = collectionApi.getFilteredByTag("event").filter(item => { 
+      return item.data.published === true;
+    }).map(event => {      
       // add the date to each talk
-      return event.data.talks.map(e => {
-        e['date'] = event.date;
-        return e
-      });
+      if(event.data.published === true) {
+        return event.data.talks.map(e => {
+          e['date'] = event.date;
+          return e
+        });
+      };
     });
     return talks.flat();
   });
