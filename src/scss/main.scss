@@ -279,7 +279,7 @@ input[type=submit] {
 h2 {
   font-size: 2rem;;
   margin: 3em 0 1em;
-  line-height: 0.9;
+  line-height: 1;
   color: #000;
 }
 
@@ -325,4 +325,19 @@ textarea {
   font-size: 1.3rem;
   padding: 0.3em 0.2em;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.code-of-conduct { 
+  text-align: justify;
+
+  p {
+    margin: 1em 0;
+    width: 100%;
+  }
+
+  li {
+    padding: 0.2em 1em;
+    margin-left: 1em;
+    list-style-position: inherit;
+  }
 }

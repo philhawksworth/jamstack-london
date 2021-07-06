@@ -4,6 +4,8 @@ layout: layouts/base.njk
 ---
 
 
+<div class="code-of-conduct">
+
 ## Code of Conduct
   
 Jamstack is an inclusive philosophy and an inclusive community.
@@ -15,7 +17,7 @@ We strive to create a friendly, welcoming, judgement- and harassment-free place 
 
 We are a diverse, global community. We have members from every gender, sexuality, gender expression, race, ethnicity, tribal background, religious affiliation, citizenship and nationality, age, physical ability, educational background, experience level that you can think of - and want everyone to feel welcome!
 
-Whether it is contributing to our website, connecting in our slack, or attending conferences and independently organized meetings, it's not only our hope, but our expectation, that you'll abide by these three basic ground rules:
+Whether it is contributing to our website, connecting in our [slack](https://jamstack.org/slack), or attending [conferences](https://jamstack.org/conference) and independently organized [meetings](https://jamstack.org/community) it's not only our hope, but our expectation, that you'll abide by these three basic ground rules:
 
   
 ### We approach interactions with thoughtfulness and care.
@@ -48,7 +50,7 @@ No one is expected to always be perfect or to know everything - sometimes even g
 
 If someone has said or done something that violates this code of conduct, please refer to the Resolving Code of Conduct Violations section.
   
-## Slack Code of Conduct
+## [Slack](https://jamstack.org/slack) Code of Conduct
 
 - Written communication is easy to misinterpret. Ask for clarification before jumping to conclusions.
 - Respect and use the correct pronouns for people when referring to them. Ask if you are not sure.
@@ -71,15 +73,14 @@ In addition to the above, the following isn't acceptable:
 - Inappropriate physical contact
 - Unwelcome sexual attention
   
-  ## Resolving Code of Conduct Violations
+## Resolving Code of Conduct Violations
 
-    If something has happened that excludes you or is making you have a bad experience, here is what should happen next.
-
+If something has happened that excludes you or is making you have a bad experience, here is what should happen next.
 
 - In the moment Are you safe? If not, get to a safe place. Can you talk to someone you trust about what happened?
 - As soon as possible evaluate the situation - is it safe to talk to the person directly about this incident?
-   - If it seems saf, try and speak with the person privately, <b>in person</b> if you can. Try and work to a resolution together. If it goes well, great! If it does not go well, please speak to an organizer as soon as you can.
-    -  If it does not seem saf, or the conversation did not go well, speak to an organizer about what happened as soon as you can.
+  - If it seems safe, try and speak with the person privately, <b>in person</b> if you can. Try and work to a resolution together. If it goes well, great! If it does not go well, please speak to an organizer as soon as you can.
+  -  If it does not seem safe, or the conversation did not go well, speak to an organizer about what happened as soon as you can.
 - After the fact Organizers are familiar with this Code of Conduct and will take reports of CoC violations seriously. They will ask you details such as: 
   - time / place / manner  of the alleged violation.
   - whether there were additional witnesses or other people involved.
@@ -98,10 +99,12 @@ If you'd like to report a CoC violation that happens.
 
 - in the Jamstack Slack, please speak to Phil Hawksworth, Perry Eising, or Ashlynn Polini by contacting us in the <a href="https://jamstack.org/slack">Jamstack slack</a> . Please do note we may be out of your timezone, but we will respond.
 - on Jamstack.org, for example in a PR, please speak to Phil Hawksworth or Perry Eising by contacting us in the <a href="https://jamstack.org/slack">Jamstack slack</a> or via email. Our emails are our first names @ netlify.com
-- at an in person meeting that is organized by your local city, please speak with the organizers, who will reach out to us via Slack or email.
-- at a Jamstack conference, please speak to any Netlify staff member, who will locate those of us who are trained to take statements, dm us, or talk to us via email.
+- at an in person or online meeting that is organized by your local city for such as the Jamstack London meetup, please speak with the organizers, who will reach out to us via Slack or email. _For Jamstack London this is [Phil Hawksworth](https://twitter.com/philhawksworth) who you can reach in direct message in the <a href="https://jamstack.org/slack">Jamstack slack</a>, or via a direct message within the conferencing platform._
     
 
 All group organizers are required to relay all reports of CoC violations and complaints to Netlify staff within one week, regardless of how "severe" they are, so we can be accountable and responsible for resolving issues promptly.
 
 Depending on the severity of the issue, the person may receive a last-chance warning, may be asked to leave the activity/group, or may receive a future ban. In very severe cases, we reserve the right to involve law enforcement should we feel it necessary. Tickets or other participation fees won't be refunded for people who are removed for CoC violations.
+
+
+</div>
