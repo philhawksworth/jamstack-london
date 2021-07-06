@@ -1,10 +1,3 @@
-# 11ty Scaffold with Serverless
+# London Jamstack meetup group
 
-A starting point for an 11ty site. With:
-
-- Nunjucks template inheritance
-- Sass pipeline with SCSS
-- Responsive breakpoints via mixins
-- Image passthrough without optimisation
-- 11ty data cascade with remote data request
-- Serverless functions pipeline with [Netlify Functions](https://netlify.com/functions)
+A site listing the events and talks presented at the London chapter of the Jamstack meetup community.
