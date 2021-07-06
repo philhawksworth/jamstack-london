@@ -1,9 +1,5 @@
 <div class="talk-card" style="background-image:url('/images/speaker-{{item.speaker.name | slug }}.jpg')">
-  {% if item.date | future %}
-  <p>Speaking at the next meetup <a href="/events/{{ item.date | formatDate }}" class="btn bubble">{{ item.date | formatDate('LLLL d') }}</a></p>
-  {% else %}
-  <p>Presented at Jamstack London <a href="/events/{{ item.date | formatDate }}" class="btn bubble">{{ item.date | formatDate('LLLL d') }}</a></p>
-  {% endif %}
+  <p><a href="/events/{{ item.date | formatDate }}" class="btn bubble">{{ item.date | formatDate('LLLL d') }}</a> at Jamstack London</p>
   <h2 class="speaker">{{ item.speaker.name }}</h2>
   <h3><a href="/talks/{{ item.title | slug }}/">{{ item.title}}</a></h3>
 </div>
