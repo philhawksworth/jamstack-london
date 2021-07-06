@@ -266,6 +266,7 @@ a.bubble:hover,
 a.bubble:focus {
   background-color: $accent-color;
   color:#fff;
+  cursor: pointer;
 }
 
 input[type=submit] {
@@ -273,7 +274,6 @@ input[type=submit] {
   color: #fff;
   margin: 1em 0 0;
   padding: 1em 4em;
-
 }
 
 h2 {
@@ -306,7 +306,7 @@ form {
   border-radius: 4px;
   padding: 1em 3em 2em;
   background-color: #fff;
-  box-shadow: 0 0 20px #00000022;
+  box-shadow: 0 0 20px #00000011;
   text-align: left;
   margin: 2em auto;
 }
