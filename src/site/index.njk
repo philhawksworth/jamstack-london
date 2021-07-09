@@ -11,6 +11,7 @@ layout: layouts/base.njk
 </section>
 
 {% set item = collections.event | first %}
+<section>
 <a href="/events/{{ item.data.date | formatDate }}" class="btn bubble">Next meeting -  {{ item.data.date | formatDate('LLLL dd, yyyy') }}</a>
 <h2 class="event-title">{{ item.data.title }}</h2>
 <div class="teaser">
@@ -21,8 +22,38 @@ layout: layouts/base.njk
   {% include "talk-tout.njk" %} 
   {% endfor %}
 </div>
-
 <p>
   <a href="/events/{{ item.data.date | formatDate }}">Find more information on event times and how to get attend.</a>
 </p> 
+</section>
 
+{% if (collections.event.length > 1) %}
+<section>
+<h2>More to come at Jamstack London</h2>
+<p>
+  Following the event on <a href="/events/{{ item.data.date | formatDate }}">{{ item.data.date | formatDate('LLLL dd') }}</a> we have more dates for your diary
+</p>
+</section>
+
+
+{% for item in collections.event.slice(1,collections.event.length) %}
+<section>
+<a href="/events/{{ item.data.date | formatDate }}" class="btn bubble">{{ item.data.date | formatDate('LLLL dd, yyyy') }}</a>
+<h2 class="event-title">{{ item.data.title }}</h2>
+<div class="teaser">
+  {{ item.templateContent | safe }}
+</div>
+<div class="talks">
+  {% for item in item.data.talks %}
+  {% include "talk-tout.njk" %} 
+  {% endfor %}
+</div>
+<p>
+  <a href="/events/{{ item.data.date | formatDate }}">Find more information on event times and how to get attend.</a>
+</p> 
+</section>
+{% endfor %}
+
+
+
+{% endif %}
