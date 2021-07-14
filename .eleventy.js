@@ -1,6 +1,7 @@
 const sass = require("sass");
 const fs = require("fs-extra");
 const { DateTime } = require("luxon");
+const marked = require("marked");
 
 
 module.exports = (eleventyConfig) => {
@@ -53,8 +54,10 @@ module.exports = (eleventyConfig) => {
     const today = DateTime.now().endOf('day');
     const date = DateTime.fromJSDate(dateObj).endOf('day');
     return date >= today;
-  })
+  });
 
+  // Markdown filter
+  eleventyConfig.addFilter("markdownify", (str) => marked(str));
 
   // where do things live?
   return {

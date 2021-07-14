@@ -18,7 +18,7 @@ layout: layouts/base.njk
 
 <h2>About this talk</h2>
 <div class="description">
-  {{ item.description }}
+  {{ item.description | markdownify | safe }}
 </div>
 
 <h2>{{ item.speaker.name }} on the internet</h2>
