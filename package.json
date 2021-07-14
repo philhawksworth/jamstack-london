@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "eleventy",
-    "serve": "eleventy --serve",
+    "serve": "eleventy --watch --serve",
     "start": "npm run dev",
     "dev": "ntl dev -d dist"
   },
