@@ -7,6 +7,22 @@
   <link rel="stylesheet" href="/css/main.css">
   <title>Jamstack London</title> 
   <meta name="description" content="The London Jamstack community meetup. A regular meeting for talks and discussion about Jamstack and related web development topics. "/>    
+  {% if ogImage %}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@jamstacklondon" />
+  <meta name="twitter:title" content="The London Jamstack meetup group" />
+  <meta name="twitter:description" content="The London Jamstack community meetup. A regular meeting for talks and discussion about Jamstack and related web development topics. " />
+  <meta name="twitter:creator" content="@jamstacklondon" />
+  <meta name="twitter:image" content="https://jamstacklondon.com/images/{{ ogImage }}" />
+  <meta name="og:image" content="https://jamstacklondon.com/images/{{ ogImage }}" />
+  <meta name="og:image:secure_url" content="https://jamstacklondon.com/images/{{ ogImage }}" />
+  <meta name="image" property="og:image" content="https://jamstacklondon.com/images/{{ ogImage }}" />
+  <meta property="og:site_name" content="Jamstack London" />
+  <meta property="og:title" content="The London Jamstack meetup group" />
+  <meta property="og:description" content="The London Jamstack community meetup. A regular meeting for talks and discussion about Jamstack and related web development topics." />
+  {% endif %}
+  
+
 </head>
 <body>
   <header>
