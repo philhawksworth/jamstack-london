@@ -22,7 +22,7 @@ layout: "layouts/base.njk"
 {% endfor %}
 </div> 
 
-<h2>Event schedule (times in UTC)</h2>
+<h2>Event schedule local to the UK (BST)</h2>
 <ol class="schedule">
   <li>
     <time datetime="{{date | formatDate }} 17:00Z">17:00</time> — <span><a href="{{ eventLink }}">Doors open</a> with social time in the lounge</span>
@@ -34,16 +34,16 @@ layout: "layouts/base.njk"
     <time datetime="{{date | formatDate }} 18:00Z">18:00</time> — <span><a href="/talks/{{talks[1].title | slug }}">Talk 2: {{talks[1].speaker.name}}</a></span>
   </li>
   <li>
-    <time datetime="{{date | formatDate }} 18:20Z">18:20</time> — <span>90 second spotlights</span>
+    <time datetime="{{date | formatDate }} 18:25Z">18:25</time> — <span>90 second spotlights</span>
   </li>
   <li>
-    <time datetime="{{date | formatDate }} 18:30Z">18:30</time> — <span>Thanks and information for next time</span>
+    <time datetime="{{date | formatDate }} 18:35Z">18:35</time> — <span>Thanks and information for next time</span>
   </li>
   <li>
-    <time datetime="{{date | formatDate }} 18:35Z">18:35</time> — <span>Post game chatter and discussions in the lounge</span>
+    <time datetime="{{date | formatDate }} 18:40Z">18:40</time> — <span>Post game chatter and discussions in the lounge</span>
   </li>
   <li>
-    <time datetime="{{date | formatDate }} 19:05Z">19:05</time> — <span>Event ends</span>
+    <time datetime="{{date | formatDate }} 19:00Z">19:00</time> — <span>Event ends</span>
   </li>
 </ol>
 
