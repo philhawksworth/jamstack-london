@@ -15,7 +15,7 @@ layout: layouts/base.njk
   Huge thanks to all of our speakers. Videos of the talks are shared with their kind permission.
 </p>
 <ul class="talks-list">
-{% for item in collections.talks %}
+{% for item in collections.talks | reverse %}
 {% include "talk-tout.njk" %} 
 {% endfor %}
 </ul>

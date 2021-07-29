@@ -10,7 +10,10 @@ layout: layouts/base.njk
   </p>
 </section>
 
-{% set item = collections.event | first %}
+
+
+{% set upcoming = collections.event | upcoming %}
+{% set item = upcoming | first %}
 <section>
 <a href="/events/{{ item.data.date | formatDate }}" class="btn bubble">Next meeting -  {{ item.data.date | formatDate('LLLL dd, yyyy') }}</a>
 <h2 class="event-title">{{ item.data.title }}</h2>
@@ -27,7 +30,8 @@ layout: layouts/base.njk
 </p> 
 </section>
 
-{% if (collections.event.length > 1) %}
+
+{% if (upcoming.length > 1) %}
 <section>
 <h2>More to come at Jamstack London</h2>
 <p>
@@ -36,7 +40,7 @@ layout: layouts/base.njk
 </section>
 
 
-{% for item in collections.event.slice(1,collections.event.length) %}
+{% for item in upcoming.slice(1,upcoming.length) %}
 <section>
 <a href="/events/{{ item.data.date | formatDate }}" class="btn bubble">{{ item.data.date | formatDate('LLLL dd, yyyy') }}</a>
 <h2 class="event-title">{{ item.data.title }}</h2>

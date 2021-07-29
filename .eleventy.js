@@ -44,6 +44,17 @@ module.exports = (eleventyConfig) => {
     return talks.flat();
   });
 
+
+  eleventyConfig.addFilter("upcoming", (collection) => {
+
+    const today = DateTime.now().endOf('day');
+    return collection.filter(item => {
+      const date = DateTime.fromJSDate(item.data.date).endOf('day');
+      return date >= today;
+    });
+  
+  });
+
   // Add date formatting
   eleventyConfig.addFilter("formatDate", (dateObj, format="yyyy-MM-dd") => {
     return DateTime.fromJSDate(dateObj).toFormat(format);
