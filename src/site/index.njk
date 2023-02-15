@@ -13,6 +13,9 @@ layout: layouts/base.njk
 
 
 {% set upcoming = collections.event | upcoming %}
+
+{% if upcoming.length %}
+
 {% set item = upcoming | first %}
 <section>
 <a href="/events/{{ item.data.date | formatDate }}" class="btn bubble">Next meeting -  {{ item.data.date | formatDate('LLLL dd, yyyy') }}</a>
@@ -57,7 +60,9 @@ layout: layouts/base.njk
 </p> 
 </section>
 {% endfor %}
-
-
-
 {% endif %}
+
+{% else %}
+  <p><a href="/talks/">Explore the previous talks and events</a></p>
+{% endif %}
+
